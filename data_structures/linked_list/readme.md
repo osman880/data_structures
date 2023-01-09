@@ -1,6 +1,6 @@
-Bu dosya linked list'ler ile ilgili fonksiyonları içerir. Fonksiyonlar 'linked_list.c' dosyasında, fonksiyonların imzaları 'linked_list.h' dosyasında tutulur. Main'e 'linked_list.h' include edilerek kullanılabilir.
+# Bu dosya linked list'ler ile ilgili fonksiyonları içerir. Fonksiyonlar 'linked_list.c' dosyasında, fonksiyonların imzaları 'linked_list.h' dosyasında tutulur. Main'e 'linked_list.h' include edilerek kullanılabilir.
 
-Fonksiyonlar:
+## Fonksiyonlar:
 
 1. Linked list'in tüm elemanlarını ekrana basar.
 2. Tek yönlü linked list'in başına eleman ekler.
