@@ -11,7 +11,7 @@ Fonksiyonlar:
 7.Tek yönlü linked list'in sounundan eleman siler.
 8.Çift yönlü linked list'in başından eleman siler.
 9.Çift yönlü linked list'in sonundan eleman siler.
-10.Dairesel linked list'e eleman ekler
+10.Dairesel linked list'e eleman ekler.
 11.Dairesel linked list'ten istenilen elemanı siler.
 12.Linked list'in en büyük elemanını bulur.
 13.Linked list'in en küçük elemanını bulur.
