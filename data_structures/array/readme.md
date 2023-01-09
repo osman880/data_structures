@@ -1,7 +1,6 @@
-# Bu dosya array'ler ile ilgili fonksiyonları içerir. Fonksiyonlar 'array.c' dosyasında, fonksiyonların imzaları 'array.h' dosyasında tutulur.
-# Main'e 'array.h' include edilerek kullanılabilir.
+# Bu dosya array'ler ile ilgili fonksiyonları içerir. Fonksiyonlar 'array.c' dosyasında, fonksiyonların imzaları 'array.h' dosyasında tutulur. Main'e 'array.h' include edilerek kullanılabilir.
 
-Fonksiyonlar:
+## Fonksiyonlar:
 1. Array'in tüm elemanlarını ekrana basar.
 2. Array'i tersine çevirir.
 3. Array'in sonuna eleman ekleme işlemi yapar.
