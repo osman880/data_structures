@@ -1,1 +1,0 @@
-# Bu projede veri yapıları (data structures) ile ilgili örnek kodlar ve fonksiyonlar mevcuttur. İlgili veri yapısı klasörü içerisinde source ve header dosyaları bulunur. 'Main.c' içerisine header dosyaları include edilerek testleri yapılır.
