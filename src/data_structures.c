@@ -8,12 +8,17 @@
  ============================================================================
  */
 
+#include "../array/array.h"
+#include "../array/array.c"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../array/array.h"
+
+
 
 int main(void) {
+
   int array[5] = {1, 2, 3, 4, 5};
 
   int array_size = sizeof(array)/sizeof(array[0]);
