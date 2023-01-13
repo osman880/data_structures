@@ -31,7 +31,7 @@ struct b{
 
 
 
-int main(void) {
+int main() {
 
 	int array[5] = {1, 2, 3, 4, 5};
 
@@ -96,17 +96,12 @@ int main(void) {
 
   printf("---------------------------------------\n---------------------------------------\n\tLinked List\n---------------------------------------\n\n");
 
-	struct node *root;
-
-	root = malloc(sizeof(struct node));
-	root -> data = 0;
-	root -> next = NULL;
-
+	struct node *root = NULL;
 
 	int i =0;
 	for(i=1;i<5;i++)
 	{
-		data_to_linkedlist(root,i*10);
+		data_to_linkedlist(&root,i*10);
 	}
 
 	printLinkedlist(root);

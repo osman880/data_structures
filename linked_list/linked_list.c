@@ -3,12 +3,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct node
+typedef struct node
 {
   int data;
   struct node* next;
 
-};
+}node;
 
 void printLinkedlist(struct node *ptr)
 {
@@ -22,15 +22,29 @@ void printLinkedlist(struct node *ptr)
   }
 }
 
-void data_to_linkedlist(struct node *i, int x)
+void data_to_linkedlist(struct node **i, int x)
 {
-	while(i->next != NULL)
-	{
-		i = i -> next;
-	}
 
-	i->next = (struct node*)malloc(sizeof(struct node));
-	i->next->data = x;
-	i->next->next = NULL;
+    struct node *newNode = malloc(sizeof(struct node));
+    newNode->data = x;
+    newNode->next     = NULL;
+
+
+    if(*i == NULL)
+         *i = newNode;
+
+    else
+    {
+        struct node *lastNode = *i;
+
+
+        while(lastNode->next != NULL)
+        {
+            lastNode = lastNode->next;
+        }
+
+
+        lastNode->next = newNode;
+    }
 
 }
