@@ -19,20 +19,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct a{
-	int i;
-	char c;
-};
 
-struct b{
-	char c;
-	int i;
-};
-
-
-
-int main() {
-
+void arrayget()
+{
 	int array[5] = {1, 2, 3, 4, 5};
 
 	int array_size = sizeof(array)/sizeof(array[0]);
@@ -93,9 +82,10 @@ int main() {
 	int min = find_min(array, new_size);
 	printf("Min is: %d\n", min);
 
+}
 
-  printf("---------------------------------------\n---------------------------------------\n\tLinked List\n---------------------------------------\n\n");
-
+void linkedlistget()
+{
 	struct node *root = NULL;
 
 	int i =0;
@@ -106,6 +96,46 @@ int main() {
 
 	printLinkedlist(root);
 
+	add_to_front(&root,5);
+
+	printLinkedlist(root);
+
+	add_to_front(&root,12);
+
+	printLinkedlist(root);
+
+	deleteLastNode(&root);
+
+	printLinkedlist(root);
+
+
+	printf("\n--------------------Doubly Linked List--------------------\n");
+
+	struct node_d* head = NULL;
+
+	addToBeginning(&head,1);
+	addToBeginning(&head,2);
+	addToBeginning(&head,13);
+
+	printdbList(head);
+
+	addToEnd(&head,65);
+	addToEnd(&head,55);
+
+	printdbList(head);
+
+
+
+}
+
+int main() {
+
+
+//	arrayget();
+
+	printf("---------------------------------------\n---------------------------------------\n\tLinked List\n---------------------------------------\n\n");
+
+	linkedlistget();
 
   return 0;
 }
