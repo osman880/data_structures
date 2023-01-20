@@ -86,43 +86,75 @@ void arrayget()
 
 void linkedlistget()
 {
-	struct node *root = NULL;
+	Node *root = NULL;
 
 	int i =0;
 	for(i=1;i<5;i++)
 	{
-		data_to_linkedlist(&root,i*10);
+		data_to_end_slinked(&root,i*10);
 	}
 
-	printLinkedlist(root);
+	print_slinked(root);
 
-	add_to_front(&root,5);
+	data_to_front_slinked(&root,5);
 
-	printLinkedlist(root);
+	print_slinked(root);
 
-	add_to_front(&root,12);
+	data_to_front_slinked(&root,12);
 
-	printLinkedlist(root);
+	print_slinked(root);
 
-	deleteLastNode(&root);
+	delete_end_slinked(&root);
 
-	printLinkedlist(root);
+	print_slinked(root);
+
+	delete_front_slinked(&root);
+
+	print_slinked(root);
+
+	data_to_front_slinked(&root,50);
+
+	print_slinked(root);
+
+	printf("Max value is: %d", max_value_slinked(root));
+	printf("\nMin value is: %d", min_value_slinked(root));
 
 
 	printf("\n--------------------Doubly Linked List--------------------\n");
 
 	struct node_d* head = NULL;
 
-	addToBeginning(&head,1);
-	addToBeginning(&head,2);
-	addToBeginning(&head,13);
+	data_to_front_dlinked(&head,1);
+	data_to_front_dlinked(&head,2);
+	data_to_front_dlinked(&head,13);
 
-	printdbList(head);
+	print_dlinked(head);
 
-	addToEnd(&head,65);
-	addToEnd(&head,55);
+	data_to_end_dlinked(&head,65);
+	data_to_end_dlinked(&head,55);
 
-	printdbList(head);
+	print_dlinked(head);
+
+	delete_front_dlinked(&head);
+	print_dlinked(head);
+
+	delete_end_dlinked(&head);
+	print_dlinked(head);
+
+
+	printf("\n--------------------Circular Linked List--------------------\n");
+
+	Node* circular_head = NULL;
+
+	data_to_front_clinked(&circular_head,10);
+	data_to_front_clinked(&circular_head,20);
+	print_clinked(circular_head);
+
+	data_to_end_clinked(&circular_head,30);
+	print_clinked(circular_head);
+
+	delete_node_clinked(&circular_head,10);
+	print_clinked(circular_head);
 
 
 
@@ -131,9 +163,9 @@ void linkedlistget()
 int main() {
 
 
-////	arrayget();
+//	arrayget();
 
-	printf("---------------------------------------\n---------------------------------------\n\tLinked List\n---------------------------------------\n\n");
+	printf("\n---------------------------------------\n\tLinked List\n---------------------------------------\n\n");
 
 	linkedlistget();
 
