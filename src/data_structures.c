@@ -14,6 +14,7 @@
 
 #include "../linked_list/linked_list.h"
 #include "../linked_list/linked_list.c"
+#include "../stack/stack.c"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -160,6 +161,25 @@ void linkedlistget()
 
 }
 
+void stackget()
+{
+	Stack* root = NULL;
+	push(&root,10);
+	push(&root,20);
+	push(&root,30);
+	push(&root,40);
+
+	print_stack(root);
+
+	pop(&root);
+	print_stack(root);
+	pop(&root);
+	print_stack(root);
+
+	printf("Top element = %d\n",peek(root));
+}
+
+
 int main() {
 
 
@@ -167,7 +187,11 @@ int main() {
 
 	printf("\n---------------------------------------\n\tLinked List\n---------------------------------------\n\n");
 
-	linkedlistget();
+//	linkedlistget();
+
+	printf("\n---------------------------------------\n\tStack\n---------------------------------------\n\n");
+
+	stackget();
 
   return 0;
 }
