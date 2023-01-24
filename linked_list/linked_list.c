@@ -71,7 +71,7 @@ void data_to_end_slinked(Node **i, int x)
 
     struct node *newNode = malloc(sizeof(Node));
     newNode->data = x;
-    newNode->next     = NULL;
+    newNode->next = NULL;
 
 
     if(NULL == *i)
