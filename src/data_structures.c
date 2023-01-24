@@ -11,14 +11,21 @@
 #include "../array/array.h"
 #include "../array/array.c"
 
-
 #include "../linked_list/linked_list.h"
 #include "../linked_list/linked_list.c"
-#include "../stack/stack.c"
+
+#include "../stack/stack_linked_list.h"
+#include "../stack/stack_linked_list.c"
+
+#include "../stack/stack_array.h"
+#include "../stack/stack_array.c"
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+
+
 
 
 void arrayget()
@@ -161,22 +168,50 @@ void linkedlistget()
 
 }
 
-void stackget()
+void stack_linked_list_get()
 {
-	Stack* root = NULL;
-	push(&root,10);
-	push(&root,20);
-	push(&root,30);
-	push(&root,40);
+	Stack_Linked* root = NULL;
+	pop_linked(&root);
+	push_stack_linked(&root,10);
+	push_stack_linked(&root,20);
+	push_stack_linked(&root,30);
+	push_stack_linked(&root,40);
 
-	print_stack(root);
+	print_stack_linked(root);
 
-	pop(&root);
-	print_stack(root);
-	pop(&root);
-	print_stack(root);
+	pop_linked(&root);
+	print_stack_linked(root);
+	pop_linked(&root);
+	print_stack_linked(root);
 
-	printf("Top element = %d\n",peek(root));
+	printf("Top element = %d\n",peek_linked(root));
+}
+
+void stack_array_get()
+{
+	Stack* stack = new_stack(10);
+
+	push(stack,10);
+	push(stack,20);
+	push(stack,30);
+	print_stack_array(stack);
+	pop(stack);
+	print_stack_array(stack);
+
+	printf("Top element = %d\n",peek(stack));
+	push(stack,30);
+	print_stack_array(stack);
+	printf("Top element = %d\n",peek(stack));
+	push(stack,40);
+	push(stack,50);
+	push(stack,60);
+	push(stack,70);
+	push(stack,80);
+	push(stack,90);
+	push(stack,100);
+	print_stack_array(stack);
+	push(stack,110);
+
 }
 
 
@@ -191,7 +226,9 @@ int main() {
 
 	printf("\n---------------------------------------\n\tStack\n---------------------------------------\n\n");
 
-	stackget();
+//	stack_linked_list_get();
+
+	stack_array_get();
 
   return 0;
 }
