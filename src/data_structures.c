@@ -1,13 +1,3 @@
-/*
- ============================================================================
- Name        : data_structures.c
- Author      : 
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
- */
-
 #include "../array/array.h"
 #include "../array/array.c"
 
@@ -19,6 +9,12 @@
 
 #include "../stack/stack_array.h"
 #include "../stack/stack_array.c"
+
+#include "../queue/queue_linked_list.h"
+#include "../queue/queue_linked_list.c"
+
+#include "../queue/queue_array.h"
+#include "../queue/queue_array.c"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -94,6 +90,7 @@ void arrayget()
 
 void linkedlistget()
 {
+	printf("\n---------------------------------------\n\tLinked List\n---------------------------------------\n\n");
 	Node *root = NULL;
 
 	int i =0;
@@ -170,6 +167,7 @@ void linkedlistget()
 
 void stack_linked_list_get()
 {
+	printf("\n---------------------------------------\n\tStack\n---------------------------------------\n\n");
 	Stack_Linked* root = NULL;
 	pop_linked(&root);
 	push_stack_linked(&root,10);
@@ -189,6 +187,7 @@ void stack_linked_list_get()
 
 void stack_array_get()
 {
+	printf("\n---------------------------------------\n\tStack\n---------------------------------------\n\n");
 	Stack* stack = new_stack(10);
 
 	push(stack,10);
@@ -214,21 +213,57 @@ void stack_array_get()
 
 }
 
+void queue_linked_get()
+{
+	printf("\n---------------------------------------\nQueue\n---------------------------------------\n\n");
+	Queue* q = create_queue();
+	printf("Empty ? : %d\n",if_Lq_empty(q));
+	en_queue(q, 10);
+	en_queue(q, 20);
+	de_queue(q);
+	de_queue(q);
+	en_queue(q, 30);
+	en_queue(q, 40);
+	en_queue(q, 50);
+	print_L_queue(q);
+	printf("Front: %d\n",peek_L(q));
+	printf("Rear: %d\n",rear_L(q));
+	de_queue(q);
+	print_L_queue(q);
+	printf("Empty ? : %d\n",if_Lq_empty(q));
+}
+
+void queue_array_get()
+{
+	Queue_Arr* q = create_queue_array(5);
+	printf("Empty ? : %d\n",is_empty_q_array(q));
+	enqueue(q,10);
+	enqueue(q,20);
+	enqueue(q,30);
+	enqueue(q,40);
+	print_queue_array(q);
+	dequeue(q);
+	print_queue_array(q);
+	printf("\nFront: %d\n",peek_q_array(q));
+	printf("Rear: %d\n",rear_q_array(q));
+	printf("Empty ? : %d\n",is_empty_q_array(q));
+
+}
+
 
 int main() {
 
-
 //	arrayget();
-
-	printf("\n---------------------------------------\n\tLinked List\n---------------------------------------\n\n");
 
 //	linkedlistget();
 
-	printf("\n---------------------------------------\n\tStack\n---------------------------------------\n\n");
-
 //	stack_linked_list_get();
 
-	stack_array_get();
+//	stack_array_get();
+
+//	queue_linked_get();
+
+	queue_array_get();
 
   return 0;
 }
