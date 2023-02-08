@@ -16,6 +16,12 @@
 #include "../queue/queue_array.h"
 #include "../queue/queue_array.c"
 
+#include "../selection_sort/selection_sort.h"
+#include "../selection_sort/selection_sort.c"
+
+#include "../bubble_sort/bubble_sort.h"
+#include "../bubble_sort/bubble_sort.c"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -251,6 +257,42 @@ void queue_array_get()
 }
 
 
+void selection_sort_get()
+{
+
+    int arr[] = {15, 73, 18, 156, 42};
+
+    int size = sizeof(arr)/sizeof(arr[0]);
+
+    print_array(arr, size);
+
+    selection_sort(arr, size);
+
+    printf("Sorted (Selection) array: \n");
+
+    print_array(arr, size);
+
+
+}
+
+
+void bubble_sort_get()
+{
+
+    int arr[] = {15, 73, 18, 156, 42};
+
+    int size = sizeof(arr)/sizeof(arr[0]);
+
+    print_array(arr, size);
+
+    bubble_sort(arr, size);
+
+    printf("Sorted (Bubble) array: \n");
+
+    print_array(arr, size);
+
+}
+
 int main() {
 
 //	arrayget();
@@ -263,7 +305,13 @@ int main() {
 
 //	queue_linked_get();
 
-	queue_array_get();
+//	queue_array_get();
+
+
+//	selection_sort_get();
+
+	bubble_sort_get();
+
 
   return 0;
 }
