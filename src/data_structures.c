@@ -260,7 +260,7 @@ void queue_array_get()
 void selection_sort_get()
 {
 
-    int arr[] = {15, 73, 18, 156, 42};
+    int arr[] = {15, 73, 18, 156, 42, 23, 2, 999};
 
     int size = sizeof(arr)/sizeof(arr[0]);
 
@@ -279,7 +279,7 @@ void selection_sort_get()
 void bubble_sort_get()
 {
 
-    int arr[] = {15, 73, 18, 156, 42};
+	int arr[] = {15, 73, 18, 156, 42, 23, 2, 999};
 
     int size = sizeof(arr)/sizeof(arr[0]);
 
@@ -306,7 +306,6 @@ int main() {
 //	queue_linked_get();
 
 //	queue_array_get();
-
 
 //	selection_sort_get();
 
