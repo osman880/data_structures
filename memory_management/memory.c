@@ -1,17 +1,10 @@
-#include "linked_list.h"
+
 #include "memory.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 
-typedef struct node
-{
-  int bas;
-  int son;
-  struct node* next;
-
-}Node;
 
 
 void print_linked(Node *ptr)
@@ -40,32 +33,92 @@ void bellek_al_adresli(Node** root, int startAddr, int size)
 
 void bellek_iade_et(Node** root, int start_addr, int size)
 {
-	Node* prev = NULL;
-	Node* current = (*root);
+//	Node* prev = NULL;
+//	Node* current = (*root);
 
-	while(NULL != current && current->bas <= start_addr)
+//	while(NULL != current && current->bas <= start_addr)
+//	{
+//
+//		prev = current;
+//		current = current -> next;
+//
+//
+//	}
+
+if(NULL == *root)
+{
+
+	*root = malloc(sizeof(Node));
+	(*root)->bas = start_addr;
+	(*root)->son = start_addr + size;
+	(*root)->next = NULL;
+
+}
+
+
+else
+{
+
+
+	if( (start_addr+size) < (*root) -> bas )
 	{
+		printf("1\n");
+	    Node *new_node = malloc(sizeof(Node));
+	    new_node -> bas = start_addr;
+	    new_node -> son = start_addr + size;
+	    new_node -> next = *root;
+	    *root = new_node;
 
-		prev = current;
-		current = current -> next;
+	}
+
+	else if( (start_addr) > (*root) -> son)
+	{
+		Node *temp = *root;
+		printf("2\n");
+
+	    Node *new_node = malloc(sizeof(Node));
+	    new_node -> bas = start_addr;
+	    new_node -> son = start_addr + size;
+	    new_node -> next = NULL;
+	    temp -> next = new_node;
 
 
 	}
 
-	if()
+	else if( (start_addr + size) == (*root) -> bas )
 	{
-		Node* new_node = malloc(sizeof(Node));
-		new_node -> bas = start_addr;
-		new_node -> son = start_addr + size;
-		print_linked(new_node);
+		printf("3\n");
 
+	    (*root) -> bas = start_addr;
 
 
 	}
 
-//	current -> son == start_addr + size
+	else if((start_addr) == (*root) -> son)
+	{
+		printf("4\n");
+		(*root) -> son = start_addr + size ;
+
+	}
+
+
+}
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
