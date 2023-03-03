@@ -23,30 +23,61 @@ void print_linked(Node *ptr)
 
 }
 
+int is_empty(Node* root)
+{
+	return root == NULL;
+}
 
 void bellek_al_adresli(Node** root, int start_addr, int size)
 {
 
 	Node *current = *root;
+	int current_index = 0;
 	while (current)
 	{
+
 		if (current->bas <= start_addr && current->son >= start_addr + size)
 		{
 			if (current->bas == start_addr && current->son == start_addr + size)
 			{
+		    	Node* temporary = *root;
+		    	for (int i = 1; i < current_index; i++)
+		    	{
+		    		temporary = temporary->next;
+		    	}
+
 			    printf("1\n");
 			    if (current->next != NULL)
 			    {
-			    	Node *temp = current -> next;
-			    	current -> bas = current -> next -> bas;
-			    	current -> son = current -> next -> son;
-			    	current -> next = current -> next -> next;
-			    	free(temp);
+
+			    	printf("temporary: %d\n", temporary -> bas);
+			    	printf("current: %d\n", current -> bas);
+			    	printf("current_index: %d\n",current_index);
+//			    	Node *temp = current -> next;
+//			    	current -> bas = current -> next -> bas;
+//			    	current -> son = current -> next -> son;
+//			    	current -> next = current -> next -> next;
+//			    	free(temp);
+
+			    	if(current_index == 0)
+			    	{
+			    		// ilk eleman gidiciyse
+			    		(*root) = current -> next;
+			    	}
+			    	else
+			    	{
+			    		temporary -> next = temporary -> next -> next;
+			    		current = current -> next;
+			    	}
 
 			    }
+
 			    else
 			    {
-			        *root = NULL;
+
+			    	current = temporary;
+			    	temporary -> next = NULL;
+
 			    }
 
 
@@ -75,13 +106,108 @@ void bellek_al_adresli(Node** root, int start_addr, int size)
 			}
 			break;
 		}
+
 		current = current->next;
+		current_index += 1;
 	}
 
 
 	printf("bellek_al_adresli(root, %d*kb, %d*kb);\n", start_addr, size);
 
 }
+
+
+void bellek_al_adressiz(Node** root, int size)
+{
+
+    if (is_empty(*root))
+    {
+    	printf("No node in the list!");
+    }
+
+
+    else if ((*root)->next == NULL)
+    {
+    	// bir node varsa
+
+        if ((*root)->son - (*root)->bas == size)
+        {
+            free(*root);
+            *root = NULL;
+        }
+        else if ((*root)->son - (*root)->bas > size)
+        {
+            (*root)->bas += size; // update start address
+        }
+    }
+
+    else
+    {
+    	// birden fazla node varsa
+        Node* best_fit_node = NULL;
+
+        int best_fit_node_found = 0;
+        int best_fix_index = 0;
+
+        int count_index = 1;
+        Node* iter = *root;
+
+        while (iter != NULL)
+        {
+
+            if (iter->son - iter->bas >= size)
+            {
+            	// yeterli memory var mı ?
+                if (best_fit_node == NULL || (iter->son - iter->bas) < (best_fit_node->son - best_fit_node->bas))
+                {
+                    best_fit_node = iter;
+                    best_fix_index = count_index;
+                }
+            }
+            iter = iter->next;
+            count_index++;
+        }
+
+        if (best_fit_node != NULL)
+        {
+        	// best-fit node found
+            if (best_fit_node->son - best_fit_node->bas == size)
+            {
+
+                if (best_fit_node == *root)
+                {
+                    *root = (*root)->next;
+                }
+
+                else
+                {
+                    iter = *root;
+                    for (int i = 1; i < best_fix_index - 1; i++)
+                    {
+                        iter = iter->next;
+                    }
+                    iter->next = best_fit_node->next;
+                }
+                free(best_fit_node);
+            }
+
+            else
+            {
+                best_fit_node->bas += size;
+            }
+        }
+
+
+    }
+
+
+    printf("bellek_al_adressiz(&root, %d*kb);\n", size);
+
+
+}
+
+
+
 
 
 

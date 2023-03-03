@@ -13,7 +13,8 @@ typedef struct node
 void print_linked(Node *ptr);
 void bellek_al_adresli(Node** root, int start_addr, int size);
 void bellek_iade_et(Node** root, int start_addr, int size);
-
+void bellek_al_adressiz(Node** root, int size);
+int is_empty(Node* root);
 
 
 #endif

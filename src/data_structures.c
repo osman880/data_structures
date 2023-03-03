@@ -300,160 +300,286 @@ void memory_get()
 {
 	Node *root = NULL;
 
-	bellek_iade_et(&root,900,5);
+
+
+
+	bellek_iade_et(&root, 900, 5);
 	print_linked(root);
 
-	bellek_iade_et(&root,26,3);
+	bellek_iade_et(&root, 26, 3);
 	print_linked(root);
 
-	bellek_al_adresli(&root,26,3);
+	bellek_al_adresli(&root, 26, 3);
 	print_linked(root);
 
-	bellek_iade_et(&root,3,1);
+	bellek_iade_et(&root,3, 1);
 	print_linked(root);
 
-	bellek_iade_et(&root,17,1);
+	bellek_iade_et(&root, 17, 1);
 	print_linked(root);
 
-	bellek_iade_et(&root,920,10);
+	bellek_iade_et(&root, 920, 10);
 	print_linked(root);
 
-	bellek_iade_et(&root,16,1);
+	bellek_iade_et(&root,16, 1);
 	print_linked(root);
 
-	bellek_iade_et(&root,9,1);
+	bellek_iade_et(&root, 9, 1);
 	print_linked(root);
 
-	bellek_iade_et(&root,8,1);
+	bellek_iade_et(&root, 8, 1);
 	print_linked(root);
 
-	bellek_iade_et(&root,19,1);
+	bellek_iade_et(&root, 19, 1);
 	print_linked(root);
 
-	bellek_iade_et(&root,18,1);
+	bellek_iade_et(&root, 18, 1);
 	print_linked(root);
 
-	bellek_iade_et(&root,24,2);
+	bellek_iade_et(&root, 24, 2);
 	print_linked(root);
 
-	bellek_iade_et(&root,1,2);
+	bellek_iade_et(&root, 1, 2);
 	print_linked(root);
 
-	bellek_iade_et(&root,29,1);
+	bellek_iade_et(&root, 29, 1);
 	print_linked(root);
 
-	bellek_al_adresli(&root,2,1);
+	bellek_al_adresli(&root, 2, 1);
 	print_linked(root);
 
-	bellek_al_adresli(&root,24,2);
+	bellek_al_adresli(&root, 24, 2);
 	print_linked(root);
 
-	bellek_al_adresli(&root,18,1);
+	bellek_al_adresli(&root, 18, 1);
 	print_linked(root);
 
-	bellek_al_adresli(&root,19,1);
+	bellek_al_adresli(&root, 19, 1);
 	print_linked(root);
 
-	bellek_al_adresli(&root,8,1);
+	bellek_al_adresli(&root, 8, 1);
 	print_linked(root);
 
-	bellek_al_adresli(&root,9,1);
+	bellek_al_adresli(&root, 9, 1);
 	print_linked(root);
 
-	bellek_al_adresli(&root,16,1);
+	bellek_al_adresli(&root, 16, 1);
 	print_linked(root);
 
-	bellek_al_adresli(&root,17,1);
+	bellek_al_adresli(&root, 17, 1);
 	print_linked(root);
 
-	bellek_iade_et(&root,28,1);
+	bellek_iade_et(&root, 28, 1);
 	print_linked(root);
 
-	bellek_iade_et(&root,17,1);
+	bellek_iade_et(&root, 17, 1);
 	print_linked(root);
 
-	bellek_iade_et(&root,16,1);
+	bellek_iade_et(&root, 16, 1);
 	print_linked(root);
 
-	bellek_iade_et(&root,899,1);
+	bellek_iade_et(&root, 899, 1);
 	print_linked(root);
 
-	bellek_iade_et(&root,27,1);
+	bellek_iade_et(&root, 27, 1);
 	print_linked(root);
 
-	bellek_iade_et(&root,18,9);
+	bellek_iade_et(&root, 18, 9);
 	print_linked(root);
 
-	bellek_al_adresli(&root,15,5);
+	bellek_al_adresli(&root, 15, 5);
 	print_linked(root);
 
-	bellek_iade_et(&root,30,50);
+	bellek_iade_et(&root, 30, 50);
 	print_linked(root);
 
-	bellek_iade_et(&root,17,1);
+	bellek_iade_et(&root, 17, 1);
 	print_linked(root);
 
-	bellek_al_adresli(&root,19,2);
+	bellek_al_adresli(&root, 19, 2);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 1);
+	print_linked(root);
+
+	bellek_iade_et(&root, 90, 17);
+	print_linked(root);
+
+	bellek_iade_et(&root, 18, 2);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 6);
+	print_linked(root);
+
+	bellek_iade_et(&root, 180, 20);
+	print_linked(root);
+
+	bellek_iade_et(&root, 250, 20);
+	print_linked(root);
+
+	bellek_iade_et(&root, 300, 20);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 29, 3);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 8);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 303, 17);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 2);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 92, 15);
+	print_linked(root);
+
+	bellek_iade_et(&root, 303, 20);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 1);
+	print_linked(root);
+
+	bellek_iade_et(&root, 92, 20);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 25);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 15);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 22);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 22);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 22);
+	print_linked(root);
+
+	bellek_iade_et(&root, 25, 7);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 195, 5);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 1);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 1);
+	print_linked(root);
+
+	bellek_iade_et(&root, 300, 20);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 7);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 20);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 20);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 6);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 2);
+	print_linked(root);
+
+	bellek_al_adressiz(&root, 2);
+	print_linked(root);
+
+	bellek_iade_et(&root, 400, 40);
+	print_linked(root);
+
+	bellek_iade_et(&root, 40, 40);
+	print_linked(root);
+
+	bellek_iade_et(&root, 100, 40);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 100, 5);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 430, 10);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 70, 10);
+	print_linked(root);
+
+	bellek_iade_et(&root, 430, 40);
+	print_linked(root);
+
+	bellek_iade_et(&root, 70, 20);
+	print_linked(root);
+
+	bellek_iade_et(&root, 950, 40);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 420, 5);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 950, 5);
+	print_linked(root);
+
+	bellek_iade_et(&root, 95, 5);
+	print_linked(root);
+
+	bellek_iade_et(&root, 330, 40);
+	print_linked(root);
+
+	bellek_iade_et(&root, 480, 40);
+	print_linked(root);
+
+	bellek_iade_et(&root, 90, 4);
+	print_linked(root);
+
+	bellek_iade_et(&root, 140, 40);
+	print_linked(root);
+
+	bellek_iade_et(&root, 990, 40);
+	print_linked(root);
+
+	bellek_iade_et(&root, 94, 1);
+	print_linked(root);
+
+	bellek_iade_et(&root, 370, 30);
+	print_linked(root);
+
+	bellek_iade_et(&root, 520, 435);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 40, 10);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 322, 10);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 480, 10);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 490, 540);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 50, 50);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 110, 20);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 330, 10);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 350, 10);
+	print_linked(root);
+
+	bellek_al_adresli(&root, 430, 10);
 	print_linked(root);
 
 
-//	Node* root2 = NULL;
-//	bellek_iade_et(&root2,1,1);
-//	bellek_iade_et(&root2,3,1);
-//	bellek_iade_et(&root2,29,1);
-//	bellek_iade_et(&root2,900,5);
-//	bellek_iade_et(&root2,920,10);
-//	print_linked(root2);
-//
-//	bellek_iade_et(&root2,28,1);
-//	print_linked(root2);
-//	bellek_iade_et(&root2,17,1);
-//	print_linked(root2);
-//	bellek_iade_et(&root2,16,1);
-//	print_linked(root2);
-//	bellek_iade_et(&root2,899,1);
-//	print_linked(root2);
-//	bellek_iade_et(&root2,27,1);
-//	print_linked(root2);
-//	bellek_iade_et(&root2,18,9);
-//	print_linked(root2);
-
-
-//	Node* root3 = NULL;
-//	bellek_iade_et(&root3,40,50);
-//	bellek_iade_et(&root3,105,35);
-//	bellek_iade_et(&root3,322,1);
-//	bellek_iade_et(&root3,400,20);
-//	bellek_iade_et(&root3,425,45);
-//	bellek_iade_et(&root3,955,35);
-//	print_linked(root3);
-//
-//	bellek_iade_et(&root3,95,5);
-//	print_linked(root3);
-//
-//	bellek_iade_et(&root3,330,40);
-//	print_linked(root3);
-//
-//	bellek_iade_et(&root3,480,40);
-//	print_linked(root3);
-//
-//	bellek_iade_et(&root3,90,4);
-//	print_linked(root3);
-//
-//	bellek_iade_et(&root3,140,40);
-//	print_linked(root3);
-//
-//	bellek_iade_et(&root3,990,40);
-//	print_linked(root3);
-//
-//	bellek_iade_et(&root3,94,1);
-//	print_linked(root3);
-//
-//	bellek_iade_et(&root3,370,30);
-//	print_linked(root3);
-//
-//	bellek_iade_et(&root3,520,435);
-//	print_linked(root3);
 
 }
 
